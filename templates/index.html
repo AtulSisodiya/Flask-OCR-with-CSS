@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OCR we's</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pizza.css')}}">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+       
+        <center><h1>OCR Application using Flask</h1></center>
+         
+        <div class='container-fluid'>
+            <div class="row">
+                <div class='col-xs-12' >
+                    <form class="form" action="/submitImage/" method="POST" enctype="multipart/form-data">
+                        <div class='row'>
+                            <div class='col-xs-4'>
+                                <label for='ocrImage'><br>Choose Image: <br></label><br>
+                                <input class='form-control' type="file" name="ocrImage" id="ocrImage" src="" alt="" onchange='showImage(event)'><br>
+                            </div>
+                            <div class='col-xs-4'><br>
+                                <img src='' id='uploadedImage' width='800' alt='no image selected'><br>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-xs-12'>
+                                <input class='btn btn-success' type="submit" value="Convert" /><br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+<script type="text/javascript" charset="utf-8">
+function showImage(event){
+    uploadedImage = document.getElementById('ocrImage').files[0];
+    console.log(uploadedImage);
+    document.getElementById('uploadedImage').src = URL.createObjectURL(event.target.files[0]);
+}
+
+    </script>
+
+</html>

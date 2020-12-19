@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Result</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pizza.css')}}">
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <center><br><h1>OCR Application using Flask</h1><br></center>
+        <div class='container-fluid'>
+            <div class="row">
+                <div class='col-xs-12'>
+                        
+                    
+                    <textarea id='textValue' readonly name="result" rows="25" cols='150' value=''>{{ text }}</textarea>
+                </div>
+            </div>
+        </div>
+                    <form method="get" accept-charset="utf-8">
+                        <button type="button" class='btn btn-info' onclick='downloadText()'>Download</button>
+                    </form>
+
+    </body>
+<script type="text/javascript" charset="utf-8">
+function downloadText(){
+    var text = document.getElementById('textValue').value;
+    var val = "data:x-application/text," + escape(text);
+    window.open(val);
+}
+
+    </script>
+</html>

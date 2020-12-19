@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    background-image: linear-gradient(to right, black, grey);
+    position: relative;
+    min-height: 100%;
+}
+
+.form {
+  text-align: center;
+  
+}
+.row {
+   text-align: center;	
+}
+form {
+  text-align: center;
+}

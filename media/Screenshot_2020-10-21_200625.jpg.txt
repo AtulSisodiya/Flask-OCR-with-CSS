@@ -1,0 +1,9 @@
+Centroid of the cross-sectional area of beam about y axis
+Centroid =S~yA/ A
+
+=5859000/30600
+
+= 191.47
+
+Therefore, the centroid of the cross-sectional area of beam about y axis is 191.14 mm
+
